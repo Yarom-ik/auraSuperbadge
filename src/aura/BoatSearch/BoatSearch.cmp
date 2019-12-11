@@ -1,0 +1,11 @@
+<aura:component description="BoatSearch" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId"
+                access="global">
+    <lightning:card title="Find a Boat" class="slds-m-top_10px" >
+        <c:BoatSearchForm />
+    </lightning:card>
+    <lightning:card title="Matching Boats" >
+        <c:BoatSearchResults  aura:id="bsr"/>
+    </lightning:card>
+
+    <aura:handler name="formsubmit" event="c:FormSubmit" action="{!c.onFormSubmit}"/>
+</aura:component>
